@@ -104,11 +104,6 @@
     }
     &__city {
         @media screen and (min-width: #{$tabletL}) {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            position: relative;
-            z-index: 3;
             padding-left: 15px;
 
             &::before {
@@ -119,11 +114,6 @@
                 width: 1px;
                 height: 100%;
                 opacity: .08;
-            }
-
-            &Selected {
-                font-weight: 500;
-                font-size: .875em;
             }
         }
         @media screen and (max-width: #{$tabletL}) {
@@ -165,27 +155,14 @@
         &Price {
             margin-right: 12px;
 
-            >summary {
-                font-weight: 500;
-            }
-
-            &::after {
-                top: 7px;
-            }
-
             @media screen and (max-width: #{$tabletL}) {
                 text-align: center;
+                justify-content: center;
                 padding: 14px 0 12px;
                 margin-right: 0;
 
-                &::after {
-                    right: calc(50% - 40px);
-                    top: 20px;
-                }
-
-                .listDetails {
-                    left: calc(50% - 60px);
-                    top: calc(100% + 12px);
+                .drop__list {
+                    left: calc(50% - 80px);
                 }
             }
         }
@@ -233,26 +210,6 @@
 
     &__stickyInfo {
         display: none;
-    }
-}
-
-.listDetails {
-
-    &__item {
-        font-weight: 500;
-        font-size: .875em;
-        color: $main-text-color;
-        cursor: pointer;
-        margin-bottom: 12px;
-        white-space: nowrap;
-
-        >a {
-            color: inherit;
-        }
-
-        &._selected {
-            display: none;
-        }
     }
 }
 
@@ -360,57 +317,6 @@
                     transform: scaleX(0);
                 }
             }
-        }
-    }
-    @media screen and (max-width: #{$tabletM}) {
-      top: 15px;
-    }
-}
-
-details {
-    position: relative;
-
-    &::after {
-        content: '';
-        position: absolute;
-        right: -15px;
-        top: 5px;
-        display: inline-block;
-        border: 5px solid transparent;
-        border-top: 5px solid $main-text-color;
-        border-radius: 5px;
-        transition: border .4s;
-    }
-
-    summary {
-        list-style: none;
-    }
-
-    .listDetails {
-        position: absolute;
-        left: 0;
-        top: calc(100% + 40px);
-        background: #ffffff;
-        border: 1px solid rgba(0, 0, 0, .06);
-        border-radius: 6px;
-        opacity: 0;
-        padding: 12px 25px 0 12px;
-        pointer-events: none;
-        transform: translateY(-16px) translateX(-10px);
-        transition: .4s;
-        z-index: 4;
-    }
-
-    &[open] {
-        .listDetails {
-            opacity: 1;
-            transform: translateY(-13px) translateX(-10px);
-            pointer-events: auto;
-        }
-
-        &::after {
-            border-top: none;
-            border-bottom: 5px solid $main-text-color;
         }
     }
 }

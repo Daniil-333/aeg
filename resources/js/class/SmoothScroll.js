@@ -15,6 +15,8 @@ export class SmoothScroll {
                 window.Burger.closeMenu();
             }
 
+            if(href == '#') return false;
+
             $('html, body').animate({
                 scrollTop: $(href).offset().top
             });

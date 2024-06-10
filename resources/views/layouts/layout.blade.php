@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <title>@section('title')@show</title>
 
+    <script src="https://kit.fontawesome.com/a6e63df60f.js" crossorigin="anonymous"></script>
+
     @vite(['resources/scss/app.scss'])
 </head>
 <body>

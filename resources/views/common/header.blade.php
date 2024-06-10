@@ -18,19 +18,19 @@
                         <p>aeg</p>
                         <p>:ruexpert</p>
                     </a>
-                    <details class="header__city">
-                        <summary class="header__citySelected">Москва</summary>
-                        <div class="header__cities listDetails">
-                            <div class="listDetails__item _selected">Москва</div>
+                    <div class="header__city drop" data-drop-box>
+                        <p class="drop__item _selected">Москва</p>
+                        <div class="header__cities drop__list" data-drop-list>
                             @foreach($cities as $city)
-                                <div class="listDetails__item">
+                                <div class="drop__item">
                                     <a href="https://aeg{{ $city['link'] }}.ruexpert.net" itemprop="location">
                                         Aeg в {{ $city['name'] }}
                                     </a>
                                 </div>
                             @endforeach
                         </div>
-                    </details>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
                 </div>
                 <button id="burger" class="header__burger burger">
                     <span></span>
@@ -41,18 +41,19 @@
                     <nav class="header__menu menu">
                         @foreach($menu as $menuItem)
                             @if(array_key_exists('submenu', $menuItem))
-                                <details class="header__menuPrice">
-                                    <summary>{{ $menuItem['name'] }}</summary>
-                                    <div class="listDetails">
+                                <div class="header__menuPrice drop" data-drop-box>
+                                    <p class="drop__item _selected">{{ $menuItem['name'] }}</p>
+                                    <div class="drop__list" data-drop-list>
                                         @foreach($menuItem['submenu'] as $menuSubItem)
-                                            <div class="listDetails__item">
+                                            <div class="drop__item">
                                                 <a href="{{ $menuSubItem['link'] }}">
                                                     {{ $menuSubItem['name'] }}
                                                 </a>
                                             </div>
                                         @endforeach
                                     </div>
-                                </details>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
                             @else
                                 <div class="menu__wrapLink">
                                     <a href="{{ $menuItem['link'] }}" class="menu__link">{{ $menuItem['name'] }}</a>

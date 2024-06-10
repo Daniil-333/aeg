@@ -41,21 +41,28 @@ class Base {
 
     initStickyHeader() {
         $(window).on('scroll', function(){
-            if($(window).width() < 768)
-                return false;
 
             let $header = $('header.header');
             let $headerBottom = $('.header .header__content');
 
             if ($(window).scrollTop() >= $header.outerHeight() - $headerBottom.outerHeight()) {
-                // $header.css('height',$headerBottom.outerHeight())
                 $header.addClass('_sticky');
             }
             else {
                 if(!$('body').hasClass('_locked')) {
-                    // $headerBottom.css('height','auto');
                     $header.removeClass('_sticky');
                 }
+            }
+        });
+    }
+
+    initDropList() {
+        $(document).on('click', '[data-drop-box]', function () {
+            if(!$(this).hasClass('_open')) {
+                $(this).addClass('_open');
+            }
+            else {
+                $(this).removeClass('_open');
             }
         });
     }
