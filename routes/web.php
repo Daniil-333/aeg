@@ -4,8 +4,6 @@ use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
-require __DIR__.'/auth.php';
-
 // Фронт
 Route::name('front.')
     ->group(function () {
