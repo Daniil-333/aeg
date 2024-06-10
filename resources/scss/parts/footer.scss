@@ -1,0 +1,204 @@
+.footer {
+    color: $gray-color;
+    background: $main-text-color;
+    padding: 50px 0;
+
+    &__main {
+
+        @media screen and (min-width: #{$tabletL}) {
+            display: flex;
+            align-items: stretch;
+        }
+    }
+
+    &__left {
+        @media screen and (min-width: #{$tabletL}) {
+            max-width: 300px;
+        }
+    }
+
+    &__center {
+        padding-left: 113px;
+
+        &Inner {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        @media screen and (max-width: #{$tabletL}) {
+            padding-left: 0;
+            padding-top: 49px;
+
+            &Inner {
+                justify-content: center;
+            }
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            &Inner {
+                flex-direction: column;
+
+                >div {
+                    &:last-child {
+                        padding-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__menu {
+        display: grid;
+        gap: 8px;
+        padding-top: 12px;
+    }
+
+    &__logoBox {
+        >p {
+            font-size: .875em;
+            margin-top: 8px;
+        }
+
+        @media screen and (max-width: #{$tabletL}) {
+            display: grid;
+            justify-content: center;
+        }
+    }
+
+    &__contact {
+        padding-top: 30px;
+
+        @media screen and (max-width: #{$tabletL}) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+
+    &__phone {
+        >a {
+            font-weight: 600;
+            font-size: rem(18);
+            color: #ffffff;
+        }
+        >p {
+            font-size: .875em;
+            margin-top: 6px;
+        }
+    }
+
+    &__addr {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        >p {
+            color: #ffffff;
+        }
+
+        @media screen and (min-width: #{$tabletL}) {
+            padding-top: 32px;
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            padding-top: 30px;
+        }
+    }
+
+    &__rating {
+
+        >p {
+            font-size: 12px;
+            color: $gray-color;
+
+            &:first-of-type {
+                margin-bottom: 6px;
+            }
+            &:last-of-type {
+                margin-top: 6px;
+            }
+        }
+
+        @media screen and (min-width: #{$tabletL}) {
+            padding-top: 30px;
+        }
+    }
+
+    &__rights {
+        font-size: .875rem;
+        color: $gray-color;
+        white-space: nowrap;
+
+        @media screen and (min-width: #{$tabletL}) {
+            margin-top: 50px;
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            padding-top: 30px;
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.3125rem;
+        transition: color 0.2s ease-in-out;
+        color: $gray-color;
+
+        @media screen and (any-hover: hover) {
+            &:hover {
+                color: $main-brand-color;
+            }
+        }
+    }
+
+    &__heading {
+        font-weight: 600;
+        font-size: rem(18);
+        color: #ffffff;
+    }
+
+    &__right {
+        display: grid;
+        gap: 8px;
+        padding-top: 12px;
+    }
+
+    &__cookies {
+        font-size: .875em;
+        color: $gray-color;
+        margin-top: 30px;
+
+        >a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: #{$tabletL}) {
+            text-align: center;
+        }
+    }
+
+    &__desktop {
+        @media screen and (max-width: #{$tabletL}) {
+          display: none;
+        }
+    }
+
+    &__mobile {
+        @media screen and (min-width: #{$tabletL}) {
+          display: none;
+        }
+        @media screen and (max-width: #{$tabletL}) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 43px;
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+}

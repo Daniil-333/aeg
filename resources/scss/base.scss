@@ -1,0 +1,53 @@
+@use 'sass:math';
+
+html {
+    scroll-padding-top: 100px;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  color: $main-text-color;
+  line-height: 1;
+
+  &._locked {
+      position: fixed;
+      left: 0;
+      overflow: hidden;
+    }
+  &._fixPadding {
+      @media screen and (min-width: #{$desktop}) {
+        padding-right: 17px;
+      }
+    }
+}
+
+.container, [class*="__container"] {
+  width: 100%;
+
+  @if ($containerWidth>0) {
+    max-width: $containerWidth + px;
+    margin: 0 auto;
+  }
+  @if ($containerPadding>0) {
+    padding: 0 math.div($containerPadding, 2) + px;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.main {
+    @media screen and (min-width: #{$desktop}) {
+        padding-top: 110px;
+    }
+    @media screen and (max-width: #{$desktop}) {
+        padding-top: 108px;
+    }
+    @media screen and (max-width: #{$tabletM}) {
+      padding-top: 62px;
+    }
+}

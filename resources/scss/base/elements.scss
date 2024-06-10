@@ -1,0 +1,77 @@
+.ui {
+
+  &-input {
+    position: relative;
+
+    input {
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      width: calc(100% - 62px);
+      background: transparent;
+      border: 1px solid rgba(32, 32, 32, .25);
+      border-radius: .625rem;
+      padding: 14px 18px 14px 44px;
+      z-index: 3;
+      transition: .4s;
+
+      &:focus {
+        border-color: $main-brand-color;
+      }
+
+      &::placeholder {
+        color: $gray-color;
+      }
+    }
+  }
+}
+
+.btn {
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  border-radius: .625rem;
+  background-color: $main-brand-color;
+  white-space: nowrap;
+  padding: 15px 25px;
+
+  &::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background: radial-gradient(100% 718.2% at 0 0, $main-brand-color 0, $main-brand-color-light 100%);
+    border-radius: .625rem;
+    width: 100%;
+    z-index: 1;
+    transition: .4s;
+  }
+
+  >span {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media screen and (any-hover: hover) {
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 2.25rem;
+  text-align: center;
+
+  @media screen and (max-width: #{$tabletM}) {
+    font-size: 1.5625rem;
+    line-height: 2.125rem;
+  }
+}
