@@ -241,7 +241,7 @@ class MainController extends Controller
                     'id' => 10,
                     'name' => 'Морозильник',
                     'link' => '#',
-                    'img' => 'microwave'
+                    'img' => 'freezer'
                 ],
                 11 => [
                     'id' => 11,
