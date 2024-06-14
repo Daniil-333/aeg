@@ -12,6 +12,11 @@ class Product extends Model
 
     protected string $prefix_url = 'remont';
 
+    public function getUrlAttribute($value)
+    {
+        return "{$this->prefix_url}_{$value}";
+    }
+
     public function services(): HasMany
     {
         return $this->hasMany(Service::class);

@@ -14,7 +14,7 @@ class MenuItemSeeder extends Seeder
     public function run(): void
     {
         DB::table('menu_items')->insert([
-            ['title' => 'Цены', 'link' => null, 'submenu' => 1],
+            ['title' => 'Цены', 'link' => 'o_kompanii/price_list', 'submenu' => 1],
             ['title' => 'Комплектующие', 'link' => 'komplektuyshie', 'submenu' => 0],
             ['title' => 'Неисправности', 'link' => 'neispravnosti', 'submenu' => 0],
             ['title' => 'О компании', 'link' => 'o_kompanii', 'submenu' => 0],

@@ -19,6 +19,11 @@ class Service extends Model
         $this->attributes['slug'] = Str::slug($value, '-');
     }
 
+    public function getUrlAttribute($value)
+    {
+        return "{$this->prefix_url}_{$value}";
+    }
+
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
