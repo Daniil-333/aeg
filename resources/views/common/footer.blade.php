@@ -32,20 +32,20 @@
                 <div class="footer__centerInner">
                     <div>
                         <p class="footer__heading">Что мы чиним?</p>
-                        @if(array_key_exists('left', $footer_links))
+                        @if($products)
                             <nav class="footer__menu">
-                                @foreach($footer_links['left'] as $footer_link)
-                                    <a href="{{ $footer_link['link'] }}" class="footer__link">{{ $footer_link['name'] }}</a>
+                                @foreach($products as $product)
+                                    <a href="{{ $product->url }}" class="footer__link">{{ $product->title }}</a>
                                 @endforeach
                             </nav>
                         @endif
                     </div>
                     <div>
                         <p class="footer__heading">Сервис</p>
-                        @if(array_key_exists('right', $footer_links))
+                        @if($menu)
                             <div class="footer__right">
-                                @foreach($footer_links['right'] as $footer_link)
-                                    <a href="{{ $footer_link['link'] }}" class="footer__link">{{ $footer_link['name'] }}</a>
+                                @foreach($menu as $menu_item)
+                                    <a href="{{ $menu_item['link'] }}" class="footer__link">{{ $menu_item['title'] }}</a>
                                 @endforeach
                             </div>
                         @endif

@@ -24,7 +24,7 @@
                             @foreach($cities as $city)
                                 <div class="drop__item">
                                     <a href="https://aeg{{ $city['link'] }}.ruexpert.net" itemprop="location">
-                                        Aeg в {{ $city['name'] }}
+                                        Aeg в {{ $city['title'] }}
                                     </a>
                                 </div>
                             @endforeach
@@ -39,15 +39,15 @@
                 </button>
                 <div id="menu" class="header__main">
                     <nav class="header__menu menu">
-                        @foreach($menu as $menuItem)
-                            @if(array_key_exists('submenu', $menuItem))
+                        @foreach($menu as $menu_item)
+                            @if($menu_item['submenu'])
                                 <div class="header__menuPrice drop" data-drop-box>
-                                    <p class="drop__item _selected">{{ $menuItem['name'] }}</p>
+                                    <p class="drop__item _selected">{{ $menu_item['title'] }}</p>
                                     <div class="drop__list" data-drop-list>
-                                        @foreach($menuItem['submenu'] as $menuSubItem)
+                                        @foreach($products as $product)
                                             <div class="drop__item">
-                                                <a href="{{ $menuSubItem['link'] }}">
-                                                    {{ $menuSubItem['name'] }}
+                                                <a href="/{{ $product->url }}">
+                                                    {{ $product->title }}
                                                 </a>
                                             </div>
                                         @endforeach
@@ -56,7 +56,7 @@
                                 </div>
                             @else
                                 <div class="menu__wrapLink">
-                                    <a href="{{ $menuItem['link'] }}" class="menu__link">{{ $menuItem['name'] }}</a>
+                                    <a href="{{ $menu_item['link'] }}" class="menu__link">{{ $menu_item['title'] }}</a>
                                 </div>
                             @endif
                         @endforeach
