@@ -10,3 +10,8 @@
     <li><strong>php artisan db:seed</strong> - сидирование</li>
     <li><strong>npm run build</strong> - сборка</li>
 </ul>
+
+## Docker
+
+    docker-compose up -d
+    vite

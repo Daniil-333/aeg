@@ -7,7 +7,7 @@
                 @if($products)
                     @foreach($products as $product)
                         <a href="/{{ $product->url }}" class="repair__item">
-                            <img src="{{ asset("storage/img/repair/{$product->img}.png") }}" alt="{{ $product->title }}" class="repair__img">
+                            <img src="{{ asset("img/repair/{$product->img}.png") }}" alt="{{ $product->title }}" class="repair__img">
                             <h2 class="repair__heading">{{ $product->title }}</h2>
                         </a>
                     @endforeach

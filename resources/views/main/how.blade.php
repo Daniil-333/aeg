@@ -27,7 +27,7 @@
                     ] as $keyHow => $itemHow)
                     <div class="how__item">
                         <div class="how__icon">
-                            <img src="{{ asset("storage/img/svg/{$itemHow['icon']}.svg") }}" alt="">
+                            <img src="{{ asset("img/svg/{$itemHow['icon']}.svg") }}" alt="">
                         </div>
                         <p class="how__heading">{{ "{$keyHow}) {$itemHow['title']}" }}</p>
                         <p class="how__txt">{{ $itemHow['txt'] }}</p>

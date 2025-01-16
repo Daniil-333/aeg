@@ -20,7 +20,7 @@
                 ] as $tagItem)
                 <div class="tags__item">
                     <div class="tags__icon">
-                        <img src="{{ asset("storage/img/svg/{$tagItem['icon']}.svg") }}" alt="{{ $tagItem['heading'] }}">
+                        <img src="{{ asset("img/svg/{$tagItem['icon']}.svg") }}" alt="{{ $tagItem['heading'] }}">
                     </div>
                     <h3 class="tags__heading">{{ $tagItem['heading'] }}</h3>
                     <p class="tags__txt">{{ $tagItem['txt'] }}</p>

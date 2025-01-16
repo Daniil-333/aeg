@@ -39,7 +39,7 @@
                             ] as $keyfaq => $itemfaq)
                             <li class="faq__item splide__slide">
                                 <div class="faq__icon">
-                                    <img src="{{ asset("storage/img/svg/{$itemfaq['icon']}.svg") }}" alt="">
+                                    <img src="{{ asset("img/svg/{$itemfaq['icon']}.svg") }}" alt="">
                                 </div>
                                 <p class="faq__heading">{{ $itemfaq['title'] }}</p>
                                 <p class="faq__txt">{{ $itemfaq['txt'] }}</p>
