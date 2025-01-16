@@ -15,14 +15,14 @@
                         <p>(многоканальный)</p>
                     </div>
                     <div class="footer__addr">
-                        <img src="{{ asset('storage/img/svg/geo.svg') }}" alt="">
+                        <img src="{{ asset('img/svg/geo.svg') }}" alt="">
                         <p>г. Москва, Шоссе Энтузиастов 31 ст57</p>
                     </div>
                 </div>
                 <div class="footer__desktop">
                     <div class="footer__rating">
                         <p>Рейтинг сервиса</p>
-                        <img src="{{ asset('storage/img/stars.png') }}" alt="">
+                        <img src="{{ asset('img/stars.png') }}" alt="">
                         <p>4.8-5.0 - 403 голоса</p>
                     </div>
                     <div class="footer__rights">&copy; ruexperts.net, 2024 г. Все права защищены.</div>
@@ -54,7 +54,7 @@
                 <div class="footer__mobile">
                     <div class="footer__rating">
                         <p>Рейтинг сервиса</p>
-                        <img src="{{ asset('storage/img/stars.png') }}" alt="">
+                        <img src="{{ asset('img/stars.png') }}" alt="">
                         <p>4.8-5.0 - 403 голоса</p>
                     </div>
                     <div class="footer__rights">&copy; Aeg, 2024 г. Все права защищены.</div>

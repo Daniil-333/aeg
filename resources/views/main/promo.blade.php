@@ -13,7 +13,7 @@
                     <div class="form__row">
                         <div class="ui-input">
                             <input type="tel" placeholder="+7 (999) 000-00-00" name="phone">
-                            <img src="{{ asset('storage/img/svg/phone.svg') }}" alt="" class="form__icon">
+                            <img src="{{ asset('img/svg/phone.svg') }}" alt="" class="form__icon">
                         </div>
                         <button type="submit" class="form__button btn"><span>Заказать ремонт</span></button>
                     </div>
@@ -22,7 +22,7 @@
                 </form>
             </div>
             <div class="promo__right">
-                <img src="{{ asset('storage/img/promo.png') }}" alt="" class="promo__img">
+                <img src="{{ asset('img/promo.png') }}" alt="" class="promo__img">
             </div>
         </div>
     </div>

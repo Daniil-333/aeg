@@ -20,3 +20,4 @@ composer.lock
 /.fleet
 /.idea
 /.vscode
+docker/mysql

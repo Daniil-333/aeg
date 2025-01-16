@@ -16,7 +16,7 @@
                         <select class="assortment__select" name="assortment_view">
                             @foreach($products as $key_product => $product)
                                 <option class="assortment__option" value="{{ $product->id }}" @if($key_product == 0) selected @endif>
-                                    {{ $product->name }}
+                                    {{ $product->title }}
                                 </option>
                             @endforeach
                         </select>

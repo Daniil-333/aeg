@@ -9,7 +9,7 @@
                     <div class="join__formRow">
                         <div class="ui-input">
                             <input type="tel" placeholder="+7 (999) 000-00-00" name="phone">
-                            <img src="{{ asset('storage/img/svg/phone.svg') }}" alt="" class="form__icon">
+                            <img src="{{ asset('img/svg/phone.svg') }}" alt="" class="form__icon">
                         </div>
                         <button type="submit" class="form__button btn"><span>Отправить заявку</span></button>
                     </div>
